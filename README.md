@@ -1,5 +1,11 @@
 # MessProfis Mieterportal Home Assistant Integration
 
+## Wichtiger Hinweis
+- Dies ist eine frühe und nur rudimentär getestete Version.
+- Es wird keine Haftung für Schäden oder Datenverlust übernommen.
+- Ein Backup deiner Home-Assistant-Konfiguration ist vor der Installation zwingend erforderlich.
+- Danke an MessProfis für die Bereitstellung einer abgreifbaren API.
+
 Benutzerdefinierte Home-Assistant-Integration für die API des Mess-Profis Mieterportals.
 
 Aktueller MVP-Umfang:
