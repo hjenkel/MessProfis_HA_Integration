@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MessProfis Mieterportal",
+        "description": "Verbinde dein MessProfis-Konto mit E-Mail und PasswordHash.",
+        "data": {
+          "email": "E-Mail",
+          "password_hash": "PasswordHash"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Authentifizierung fehlgeschlagen",
+      "cannot_connect": "API nicht erreichbar",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "abort": {
+      "already_configured": "Konto ist bereits konfiguriert"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MessProfis Optionen",
+        "data": {
+          "update_interval_hours": "Aktualisierungsintervall (Stunden)"
+        }
+      }
+    }
+  }
+}

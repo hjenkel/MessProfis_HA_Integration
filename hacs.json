@@ -1,0 +1,12 @@
+{
+  "name": "MessProfis Mieterportal",
+  "content_in_root": false,
+  "render_readme": true,
+  "country": [
+    "DE"
+  ],
+  "domains": [
+    "sensor"
+  ],
+  "homeassistant": "2024.1.0"
+}

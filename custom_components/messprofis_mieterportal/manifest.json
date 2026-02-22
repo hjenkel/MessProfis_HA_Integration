@@ -1,0 +1,16 @@
+{
+  "domain": "messprofis_mieterportal",
+  "name": "MessProfis Mieterportal",
+  "codeowners": [
+    "@hjenkel"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/hjenkel/MessProfis_Mieterportal_HAIntegration",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "loggers": [
+    "custom_components.messprofis_mieterportal"
+  ],
+  "requirements": [],
+  "version": "0.1.0"
+}

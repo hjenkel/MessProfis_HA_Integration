@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MessProfis Mieterportal",
+        "description": "Connect your MessProfis account using email and PasswordHash.",
+        "data": {
+          "email": "Email",
+          "password_hash": "PasswordHash"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Authentication failed",
+      "cannot_connect": "Cannot connect to API",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Account is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MessProfis options",
+        "data": {
+          "update_interval_hours": "Update interval (hours)"
+        }
+      }
+    }
+  }
+}
