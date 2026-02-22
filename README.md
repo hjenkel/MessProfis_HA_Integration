@@ -1,15 +1,15 @@
 # MessProfis Mieterportal Home Assistant Integration
 
-Custom Home Assistant integration for the Mess-Profis Mieterportal API.
+Benutzerdefinierte Home-Assistant-Integration fuer die API des Mess-Profis Mieterportals.
 
-Current MVP scope:
-- Login/data fetch via `Mail` + `PasswordHash`
-- 4 sensors per apartment:
+Aktueller MVP-Umfang:
+- Login/Datenabruf ueber `Mail` + `PasswordHash`
+- 4 Sensoren pro Wohnung:
   - `Heizung aktuell` (kWh)
   - `Kaltwasser aktuell` (m³)
   - `Warmwasser aktuell` (kWh)
   - `Warmwasser aktuell (m³)`
-- Attributes per sensor:
+- Attribute pro Sensor:
   - `last_month_date`
   - `estimated`
   - `jahreswert`
@@ -17,35 +17,35 @@ Current MVP scope:
 ## Installation
 
 ### Option A: HACS (Custom Repository)
-1. Open `HACS -> Integrations -> ⋮ -> Custom repositories`.
-2. Add repository URL:
+1. Oeffne `HACS -> Integrationen -> ⋮ -> Benutzerdefinierte Repositories`.
+2. Fuege die Repository-URL hinzu:
    - `https://github.com/hjenkel/MessProfis_Mieterportal_HAIntegration`
-3. Category: `Integration`.
-4. Search for `MessProfis Mieterportal` in HACS and install.
-5. Restart Home Assistant.
+3. Kategorie: `Integration`.
+4. Suche in HACS nach `MessProfis Mieterportal` und installiere die Integration.
+5. Starte Home Assistant neu.
 
-### Option B: Manual
-1. Copy `custom_components/messprofis_mieterportal` to:
+### Option B: Manuell
+1. Kopiere `custom_components/messprofis_mieterportal` nach:
    - `<config>/custom_components/messprofis_mieterportal`
-2. Restart Home Assistant.
+2. Starte Home Assistant neu.
 
-## Configuration
-1. Open `Settings -> Devices & Services -> Add Integration`.
-2. Select `MessProfis Mieterportal`.
-3. Enter:
+## Konfiguration
+1. Oeffne `Einstellungen -> Geraete & Dienste -> Integration hinzufuegen`.
+2. Waehle `MessProfis Mieterportal`.
+3. Trage ein:
    - `Email`
    - `PasswordHash`
 
 Optional:
-- In integration options, adjust `update_interval_hours` (default: `12`, allowed: `6..48`).
+- In den Integrationsoptionen kannst du `update_interval_hours` anpassen (Standard: `12`, erlaubt: `6..48`).
 
-## Notes
-- This MVP expects a ready-to-use `PasswordHash`.
-- Plain password login flow and hash generation are not included yet.
-- The integration uses the latest available monthly entry as the "current" value.
+## Hinweise
+- Dieses MVP erwartet einen bereits vorhandenen `PasswordHash`.
+- Ein Login-Flow mit Klartextpasswort und Hash-Erzeugung ist noch nicht enthalten.
+- Als "aktueller" Wert wird immer der zuletzt verfuegbare Monatseintrag verwendet.
 
-## Local API Test Client
-For API debugging outside Home Assistant (developer tool, not required for HA installation):
+## Lokaler API-Testclient
+Fuer API-Debugging ausserhalb von Home Assistant (Entwicklerwerkzeug, nicht fuer die HA-Installation erforderlich):
 
 ```bash
 export MESSPROFIS_EMAIL="user@example.com"
@@ -53,5 +53,5 @@ export MESSPROFIS_PASSWORD_HASH="your_hash"
 python3 scripts/messprofis-test.py
 ```
 
-## Data Source
+## Datenquelle
 - Endpoint: `POST https://mieterportal.mess-profis.de/api/Mieter/Login`
